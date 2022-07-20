@@ -28,13 +28,13 @@ print('Second standard deviation is', second_std_dev_start, 'and', second_std_de
 print('Third standard deviation is', third_std_dev_start, 'and', third_std_dev_end)
 
 fig = ff.create_distplot([data], ['result'], show_hist = False)
-fig.add_trace(go.Scatter(x = [mean, mean], y = [0, 0.17], mode = 'lines', name = 'MEAN'))
-fig.add_trace(go.Scatter(x = [first_std_dev_start, first_std_dev_start], y = [0, 0.17], mode = 'lines', name = 'Standard deviation 1'))
-fig.add_trace(go.Scatter(x = [first_std_dev_end, first_std_dev_end], y = [0, 0.17], mode = 'lines', name = 'Standard deviation 1'))
-fig.add_trace(go.Scatter(x = [second_std_dev_start, second_std_dev_start], y = [0, 0.17], mode = 'lines', name = 'Standard deviation 2'))
-fig.add_trace(go.Scatter(x = [second_std_dev_end, second_std_dev_end], y = [0, 0.17], mode = 'lines', name = 'Standard deviation 2'))
-fig.add_trace(go.Scatter(x = [third_std_dev_start, third_std_dev_start], y = [0, 0.17], mode = 'lines', name = 'Standard deviation 3'))
-fig.add_trace(go.Scatter(x = [third_std_dev_end, third_std_dev_end], y = [0, 0.17], mode = 'lines', name = 'Standard deviation 3'))
+fig.add_trace(go.Scatter(x = [mean, mean], y = [0, 0.03], mode = 'lines', name = 'MEAN'))
+fig.add_trace(go.Scatter(x = [first_std_dev_start, first_std_dev_start], y = [0, 0.03], mode = 'lines', name = 'Standard deviation 1'))
+fig.add_trace(go.Scatter(x = [first_std_dev_end, first_std_dev_end], y = [0, 0.03], mode = 'lines', name = 'Standard deviation 1'))
+fig.add_trace(go.Scatter(x = [second_std_dev_start, second_std_dev_start], y = [0, 0.03], mode = 'lines', name = 'Standard deviation 2'))
+fig.add_trace(go.Scatter(x = [second_std_dev_end, second_std_dev_end], y = [0, 0.03], mode = 'lines', name = 'Standard deviation 2'))
+fig.add_trace(go.Scatter(x = [third_std_dev_start, third_std_dev_start], y = [0, 0.03], mode = 'lines', name = 'Standard deviation 3'))
+fig.add_trace(go.Scatter(x = [third_std_dev_end, third_std_dev_end], y = [0, 0.03], mode = 'lines', name = 'Standard deviation 3'))
 fig.show()
 
 list_of_data_within_1_std_dev = [result for result in data if result > first_std_dev_start and result < first_std_dev_end]
